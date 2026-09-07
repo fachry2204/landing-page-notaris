@@ -5,7 +5,6 @@ Implementasi awal UI untuk profil kantor notaris dengan Vue 3 + Vite + TypeScrip
 ## Menjalankan frontend
 
 ```powershell
-cd frontend
 npm install
 npm run dev
 ```
