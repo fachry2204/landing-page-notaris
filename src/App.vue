@@ -28,14 +28,15 @@ const testimonials = [
   { quote: 'Komunikatif, teliti, dan transparan. Kami mendapatkan solusi yang paling sesuai untuk kebutuhan keluarga.', name: 'Hendra Wijaya', role: 'Klien Pribadi' }
 ]
 const activeTestimonial = ref(0)
+const visibleTestimonials = computed(() => Array.from({ length: testimonials.length }, (_, index) => testimonials[(activeTestimonial.value + index) % testimonials.length]))
 const teamMembers = [
-  { name: 'Salfa Novia Roza, S.H., M.Kn.', role: 'Notaris & PPAT', photo: teamSalfa },
-  { name: 'Fairy lorenza', role: 'Legal Associate', photo: teamHijab },
-  { name: 'Lolonta Gabriella Exaudita Ujung, S.H., M.Kn', role: 'Notaris & PPAT', photo: teamDewi },
-  { name: 'Nauval Musthofa, S.H', role: 'Notaris & PPAT', photo: teamAndika },
-  { name: 'Gabriellia Tefany', role: 'Notaris & PPAT', photo: teamRina },
-  { name: 'Hidayatul Mithri Zura S.H., M.Kn.', role: 'Legal Associate', photo: teamWoman },
-  { name: 'Muhammad Khadafy', role: 'Notaris & PPAT', photo: teamBudi }
+  { name: 'Salfa Novia Roza, S.H., M.Kn.', role: 'Notaris & PPAT\nNPAK · Notaris Pasar Modal Terdaftar OJK', photo: teamSalfa },
+  { name: 'Fairy lorenza', role: 'Notarial & PPAT Associate', photo: teamHijab },
+  { name: 'Lolonta Gabriella Exaudita Ujung, S.H., M.Kn', role: 'Notarial Associate', photo: teamDewi },
+  { name: 'Nauval Musthofa, S.H', role: 'Notarial & Field Operations', photo: teamAndika },
+  { name: 'Gabriellia Tefany', role: 'Notarial & PPAT Associate', photo: teamRina },
+  { name: 'Hidayatul Mithri Zura S.H., M.Kn.', role: 'Notarial Intern', photo: teamWoman },
+  { name: 'Muhammad Khadafy', role: 'Office Support', photo: teamBudi }
 ]
 const services = ref<Service[]>([
   { title: 'Pembuatan Akta', description: 'Pembuatan akta autentik sesuai peraturan yang berlaku.', icon: FileText },
@@ -52,8 +53,9 @@ function addService(){ services.value.push({title:'Layanan Baru',description:'De
 function removeService(i:number){ services.value.splice(i,1) }
 function nextSlide(direction = 1){ activeSlide.value = (activeSlide.value + direction + slides.length) % slides.length }
 let slider: number | undefined
-onMounted(() => { slider = window.setInterval(() => nextSlide(), 10000); window.addEventListener('scroll', () => scrollY.value = window.scrollY, {passive:true}) })
-onUnmounted(() => { if (slider) window.clearInterval(slider) })
+let testimonialSlider: number | undefined
+onMounted(() => { slider = window.setInterval(() => nextSlide(), 10000); testimonialSlider = window.setInterval(() => activeTestimonial.value = (activeTestimonial.value + 1) % testimonials.length, 6500); window.addEventListener('scroll', () => scrollY.value = window.scrollY, {passive:true}) })
+onUnmounted(() => { if (slider) window.clearInterval(slider); if (testimonialSlider) window.clearInterval(testimonialSlider) })
 </script>
 
 <template>
@@ -67,7 +69,7 @@ onUnmounted(() => { if (slider) window.clearInterval(slider) })
       <section id="tentang" class="section split"><div class="about-visual"><img class="about-team-image" :src="aboutTeam" alt="Tim kantor notaris"/><div class="floating-chip"><ShieldCheck :size="17"/><span><b>Terverifikasi</b>Standar layanan profesional</span></div></div><div><p class="eyebrow">TENTANG KAMI</p><h2>Legalitas yang dibangun atas ketelitian.</h2><p>Setiap dokumen kami tangani dengan tanggung jawab, kejelasan proses, dan komitmen pada perlindungan hak Anda.</p><div class="number-grid"><div><b>15+</b><span>Tahun pengalaman</span></div><div><b>2.500+</b><span>Klien ditangani</span></div><div><b>3.000+</b><span>Akta diselesaikan</span></div></div></div></section>
       <section id="tim" class="section"><div class="team-heading"><div><p class="eyebrow">ORANG DI BALIK KEPERCAYAAN</p><h2>Tim Notaris</h2></div></div><div class="grid team team-all"><article v-for="person in teamMembers" :key="person.photo" class="card person"><div class="portrait"><img :src="person.photo" :alt="person.name"/></div><h3>{{person.name}}</h3><p>{{person.role}}</p></article></div></section>
       <section id="artikel" class="section"><p class="eyebrow">WAWASAN HUKUM</p><h2>Artikel Terbaru</h2><div class="grid articles"><article v-for="article in ['Pentingnya Akta Autentik untuk Perjanjian','Langkah Awal Mendirikan Perseroan Terbatas','Memahami Legalitas dalam Transaksi Properti']" :key="article" class="card"><span class="tag">EDUKASI HUKUM</span><h3>{{article}}</h3><p>Informasi ringkas untuk membantu Anda membuat keputusan yang tepat.</p><a href="#kontak" @click.prevent="go('kontak')">Baca artikel <ArrowRight :size="15"/></a></article></div></section>
-      <section class="testimonial-section"><div class="testimonial-orb"></div><p class="eyebrow">DIPERCAYA OLEH KLIEN</p><div class="testimonial-shell"><Quote class="quote-mark"/><transition name="fade" mode="out-in"><article :key="activeTestimonial" class="testimonial"><div class="stars"><Star v-for="n in 5" :key="n" :size="16" fill="currentColor"/></div><blockquote>“{{ testimonials[activeTestimonial].quote }}”</blockquote><div class="client"><div>{{testimonials[activeTestimonial].name[0]}}</div><span><b>{{testimonials[activeTestimonial].name}}</b>{{testimonials[activeTestimonial].role}}</span></div></article></transition><div class="testimonial-controls"><button v-for="(_, index) in testimonials" :key="index" :class="{selected:index===activeTestimonial}" @click="activeTestimonial=index">0{{ index + 1 }}</button></div></div></section>
+      <section class="testimonial-section"><div class="testimonial-orb"></div><p class="eyebrow">DIPERCAYA OLEH KLIEN</p><div class="testimonial-shell"><div class="testimonial-cards"><article v-for="person in visibleTestimonials" :key="person.name" class="testimonial-card"><Quote class="quote-mark"/><div class="stars"><Star v-for="n in 5" :key="n" :size="15" fill="currentColor"/></div><blockquote>“{{ person.quote }}”</blockquote><div class="client"><div>{{person.name[0]}}</div><span><b>{{person.name}}</b>{{person.role}}</span></div></article></div><div class="testimonial-controls"><button v-for="(_, index) in testimonials" :key="index" :class="{selected:index===activeTestimonial}" @click="activeTestimonial=index">0{{ index + 1 }}</button></div></div></section>
       <section id="kontak" class="contact"><div><p class="eyebrow">KONSULTASI AWAL</p><h2>Butuh konsultasi notaris?</h2><p>Hubungi kami untuk mendapatkan informasi awal dan penjadwalan konsultasi.</p><div class="contact-meta"><span><Phone :size="14"/>+62 812 3456 7890</span><span><MapPin :size="14"/>Jakarta, Indonesia</span></div></div><div class="contact-actions"><a class="button" href="https://wa.me/6281234567890" target="_blank">WhatsApp Kami</a><button class="outline" @click="admin=true">Demo Admin</button></div></section>
     </main><footer><button class="brand"><Scale :size="22"/><span>NOTARIS</span></button><span>© 2026 Notaris Profile. Seluruh hak dilindungi.</span></footer>
   </div>

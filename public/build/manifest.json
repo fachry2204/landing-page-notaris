@@ -7,6 +7,10 @@
     "file": "assets/hero-notary-BLb4Wcba.png",
     "src": "src/assets/hero-notary.png"
   },
+  "src/assets/hero-office.jpg": {
+    "file": "assets/hero-office-BRkk8gCQ.jpg",
+    "src": "src/assets/hero-office.jpg"
+  },
   "src/assets/hero-slide-two.jpg": {
     "file": "assets/hero-slide-two-P1DHMcXw.jpg",
     "src": "src/assets/hero-slide-two.jpg"
@@ -48,12 +52,12 @@
     "src": "src/assets/team-woman.webp"
   },
   "src/main.ts": {
-    "file": "assets/main-Cba1bWl6.js",
+    "file": "assets/main-kaQvMaWt.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "assets/main-jL30Bssr.css"
+      "assets/main-Ch5Xs3no.css"
     ],
     "assets": [
       "assets/hero-notary-BLb4Wcba.png",
@@ -67,7 +71,8 @@
       "assets/team-budi-BlZyJWHT.webp",
       "assets/team-andika-BkBS2Gil.webp",
       "assets/team-salfa-Cu7QToGr.jpg",
-      "assets/logo-oza-CKM_opTT.webp"
+      "assets/logo-oza-CKM_opTT.webp",
+      "assets/hero-office-BRkk8gCQ.jpg"
     ]
   }
 }
