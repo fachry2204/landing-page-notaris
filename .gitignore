@@ -2,6 +2,10 @@ node_modules/
 dist/
 .vite/
 vite-dev*.log
+/vendor/
+/public/hot
+/public/storage
+/storage/*.key
 .env
 .env.*
 !.env.example

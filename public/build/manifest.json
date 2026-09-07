@@ -1,0 +1,73 @@
+{
+  "src/assets/about-team.jpg": {
+    "file": "assets/about-team-BItFaUMS.jpg",
+    "src": "src/assets/about-team.jpg"
+  },
+  "src/assets/hero-notary.png": {
+    "file": "assets/hero-notary-BLb4Wcba.png",
+    "src": "src/assets/hero-notary.png"
+  },
+  "src/assets/hero-slide-two.jpg": {
+    "file": "assets/hero-slide-two-P1DHMcXw.jpg",
+    "src": "src/assets/hero-slide-two.jpg"
+  },
+  "src/assets/hero-team.jpg": {
+    "file": "assets/hero-team-BmQ6VkNc.jpg",
+    "src": "src/assets/hero-team.jpg"
+  },
+  "src/assets/logo-oza.webp": {
+    "file": "assets/logo-oza-CKM_opTT.webp",
+    "src": "src/assets/logo-oza.webp"
+  },
+  "src/assets/team-andika.webp": {
+    "file": "assets/team-andika-BkBS2Gil.webp",
+    "src": "src/assets/team-andika.webp"
+  },
+  "src/assets/team-budi.webp": {
+    "file": "assets/team-budi-BlZyJWHT.webp",
+    "src": "src/assets/team-budi.webp"
+  },
+  "src/assets/team-dewi.webp": {
+    "file": "assets/team-dewi-D695bE_r.webp",
+    "src": "src/assets/team-dewi.webp"
+  },
+  "src/assets/team-hijab.webp": {
+    "file": "assets/team-hijab-DdZYHURM.webp",
+    "src": "src/assets/team-hijab.webp"
+  },
+  "src/assets/team-rina.webp": {
+    "file": "assets/team-rina-BBm9wUYe.webp",
+    "src": "src/assets/team-rina.webp"
+  },
+  "src/assets/team-salfa.jpg": {
+    "file": "assets/team-salfa-Cu7QToGr.jpg",
+    "src": "src/assets/team-salfa.jpg"
+  },
+  "src/assets/team-woman.webp": {
+    "file": "assets/team-woman-D6ja33v9.webp",
+    "src": "src/assets/team-woman.webp"
+  },
+  "src/main.ts": {
+    "file": "assets/main-Cba1bWl6.js",
+    "name": "main",
+    "src": "src/main.ts",
+    "isEntry": true,
+    "css": [
+      "assets/main-jL30Bssr.css"
+    ],
+    "assets": [
+      "assets/hero-notary-BLb4Wcba.png",
+      "assets/hero-team-BmQ6VkNc.jpg",
+      "assets/hero-slide-two-P1DHMcXw.jpg",
+      "assets/about-team-BItFaUMS.jpg",
+      "assets/team-rina-BBm9wUYe.webp",
+      "assets/team-dewi-D695bE_r.webp",
+      "assets/team-hijab-DdZYHURM.webp",
+      "assets/team-woman-D6ja33v9.webp",
+      "assets/team-budi-BlZyJWHT.webp",
+      "assets/team-andika-BkBS2Gil.webp",
+      "assets/team-salfa-Cu7QToGr.jpg",
+      "assets/logo-oza-CKM_opTT.webp"
+    ]
+  }
+}
