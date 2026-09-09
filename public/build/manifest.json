@@ -7,16 +7,12 @@
     "file": "assets/hero-notary-BLb4Wcba.png",
     "src": "src/assets/hero-notary.png"
   },
-  "src/assets/hero-office.jpg": {
-    "file": "assets/hero-office-BRkk8gCQ.jpg",
-    "src": "src/assets/hero-office.jpg"
-  },
   "src/assets/hero-slide-two.jpg": {
-    "file": "assets/hero-slide-two-P1DHMcXw.jpg",
+    "file": "assets/team-salfa-P1DHMcXw.jpg",
     "src": "src/assets/hero-slide-two.jpg"
   },
   "src/assets/hero-team.jpg": {
-    "file": "assets/hero-team-BmQ6VkNc.jpg",
+    "file": "assets/hero-team-DRgUbWOT.jpg",
     "src": "src/assets/hero-team.jpg"
   },
   "src/assets/logo-oza.webp": {
@@ -44,25 +40,25 @@
     "src": "src/assets/team-rina.webp"
   },
   "src/assets/team-salfa.jpg": {
-    "file": "assets/team-salfa-Cu7QToGr.jpg",
-    "src": "src/assets/team-salfa.jpg"
+    "file": "assets/team-salfa-P1DHMcXw.jpg",
+    "src": "src/assets/hero-slide-two.jpg"
   },
   "src/assets/team-woman.webp": {
     "file": "assets/team-woman-D6ja33v9.webp",
     "src": "src/assets/team-woman.webp"
   },
   "src/main.ts": {
-    "file": "assets/main-kaQvMaWt.js",
+    "file": "assets/main-CHV7Dw00.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "css": [
-      "assets/main-Ch5Xs3no.css"
+      "assets/main-DbgGP1UQ.css"
     ],
     "assets": [
       "assets/hero-notary-BLb4Wcba.png",
-      "assets/hero-team-BmQ6VkNc.jpg",
-      "assets/hero-slide-two-P1DHMcXw.jpg",
+      "assets/hero-team-DRgUbWOT.jpg",
+      "assets/team-salfa-P1DHMcXw.jpg",
       "assets/about-team-BItFaUMS.jpg",
       "assets/team-rina-BBm9wUYe.webp",
       "assets/team-dewi-D695bE_r.webp",
@@ -70,9 +66,7 @@
       "assets/team-woman-D6ja33v9.webp",
       "assets/team-budi-BlZyJWHT.webp",
       "assets/team-andika-BkBS2Gil.webp",
-      "assets/team-salfa-Cu7QToGr.jpg",
-      "assets/logo-oza-CKM_opTT.webp",
-      "assets/hero-office-BRkk8gCQ.jpg"
+      "assets/logo-oza-CKM_opTT.webp"
     ]
   }
 }
