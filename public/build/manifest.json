@@ -1,4 +1,20 @@
 {
+  "_panel-top-COwEJSsb.js": {
+    "file": "assets/panel-top-COwEJSsb.js",
+    "name": "panel-top"
+  },
+  "src/admin.ts": {
+    "file": "assets/admin-DMOjhe1n.js",
+    "name": "admin",
+    "src": "src/admin.ts",
+    "isEntry": true,
+    "imports": [
+      "_panel-top-COwEJSsb.js"
+    ],
+    "css": [
+      "assets/admin-OQVK7gYg.css"
+    ]
+  },
   "src/assets/about-team.jpg": {
     "file": "assets/about-team-BItFaUMS.jpg",
     "src": "src/assets/about-team.jpg"
@@ -52,12 +68,15 @@
     "src": "src/assets/team-woman.webp"
   },
   "src/main.ts": {
-    "file": "assets/main-BJ05kPy7.js",
+    "file": "assets/main-ChAAkwjm.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
+    "imports": [
+      "_panel-top-COwEJSsb.js"
+    ],
     "css": [
-      "assets/main--RDZEaT2.css"
+      "assets/main-Ch4TRRpp.css"
     ],
     "assets": [
       "assets/hero-notary-BLb4Wcba.png",
